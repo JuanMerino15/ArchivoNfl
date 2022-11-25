@@ -20,7 +20,7 @@ public class Equipos {
         equipos = new ArrayList<>();
     }
 
-    public String getNombre() {
+     public String getNombre() {
         return nombre;
     }
 
@@ -28,12 +28,21 @@ public class Equipos {
         this.nombre = nombre;
     }
 
-    public ArrayList<nfl> getEquipos() {
+    public void add(nfl equipo) {
+        this.equipos.add(equipo);
+    }
+    
+    public void remove(nfl equipo){
+        this.equipos.remove(equipo);
+    }
+
+    public ArrayList<nfl> getnfl() {
         return equipos;
     }
 
-    public void setEquipos(ArrayList<nfl> equipos) {
-        this.equipos = equipos;
+    public nfl getnfl(int e){
+        return equipos.get(e);
     }
-    
+
 }
+
