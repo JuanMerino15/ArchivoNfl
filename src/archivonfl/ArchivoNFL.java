@@ -99,7 +99,7 @@ public class ArchivoNFL {
         }
     }
   
-}
+
 
         
    public static void eliminarArchivo(String name){
@@ -110,7 +110,7 @@ public class ArchivoNFL {
             System.out.println("Error al eliminar archivo ");
         }
     }
-
+}
 
     
     
