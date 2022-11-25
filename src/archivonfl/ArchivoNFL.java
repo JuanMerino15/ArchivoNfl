@@ -99,53 +99,10 @@ public class ArchivoNFL {
         }
     }
   
-  
-
-        
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws IOException {
-        BufferedReader buferTeclado = new BufferedReader(new InputStreamReader(System.in));
-        String entrada;
-        String fileName;
-       
-        int opcion;
-        
-        System.out.println("CRUD de un archivo de texto");
-        System.out.println("----------------------------------------");
-        System.out.println("1 - Leer un archivo de texto existente");
-        System.out.println("2- Crear un archivo de texto");
-       
-        System.out.println(" ¿Que quieres hacer? ");
-        entrada = buferTeclado.readLine();
-        opcion = Integer.parseInt(entrada);
-        System.out.println("Escribe el nombre del archivo: ");
-        entrada = buferTeclado.readLine();
-        fileName = entrada;
-        
-        
-        
-        switch( opcion ){
-            case 1: {
-                System.out.println("Lectura de un archivo existente");         
-                  System.out.println("Contenido del archivo: ");
-                  leerArchivo(entrada);
-            }
-            break;
-            case 2: {
-                System.out.println("Creacion de un archivo de texto");
-                escribirArchivo(fileName);
-                
-            }
-            break;
-            
-    default: System.out.println("Opcion no valida");
-        }
-    }
 }
 
-       
+        
+   
     
     
 
