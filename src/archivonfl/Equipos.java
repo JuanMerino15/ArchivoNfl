@@ -5,14 +5,14 @@
 package archivonfl;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
  * @author juan
  */
 public class Equipos {
-    
-    private String nombre;
+      private String nombre;
     ArrayList<nfl> equipos;
     
     public Equipos(String nombre) {
@@ -44,5 +44,10 @@ public class Equipos {
         return equipos.get(e);
     }
 
-}
+    void add(Jugadores unJugadores) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
+   
+}
+   

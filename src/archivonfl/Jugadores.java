@@ -4,6 +4,7 @@
  */
 package archivonfl;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -11,7 +12,9 @@ import java.util.LinkedList;
  * @author juan
  */
 public class Jugadores {
-      private String name;
+    
+   
+ private String name;
        LinkedList<Equipos> Equipos;
        
        public Jugadores(String name){
@@ -42,11 +45,4 @@ public class Jugadores {
         public Equipos getEquipos(int e) {
         return Equipos.get(e);
     }
-        
-        
-    
-
 }
-
-    
-   
