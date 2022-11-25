@@ -15,34 +15,37 @@ public class Jugadores {
     
    
  private String name;
-       LinkedList<Equipos> Equipos;
+ private int numero;
+ private String posicion;
        
-       public Jugadores(String name){
+       public Jugadores(String name, int num, String p ){
         this.name = name;
-        Equipos = new LinkedList<>();
+        this.numero = num;
+        this.posicion = p;
     }
-       
-     public String getName() {
+
+    public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    
-   public void add(Equipos unEquipos){
-       this.Equipos.add(unEquipos);
-   }
-   
-   public void remove(Equipos unEquipos){
-       this.Equipos.remove(unEquipos);
-   }
 
-    public LinkedList<Equipos> getEquipos() {
-        return Equipos;
+    public int getNumero() {
+        return numero;
     }
-    
-        public Equipos getEquipos(int e) {
-        return Equipos.get(e);
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
+
+    public String getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    }
+       
 }

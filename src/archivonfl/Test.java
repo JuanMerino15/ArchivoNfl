@@ -21,6 +21,8 @@ public class Test {
         String nombre;
         String Equipos;
         String jugador;
+        String posicion;
+        int numero;
         int e;
         char a;
         LinkedList<Equipos> lista = new LinkedList<Equipos>();
@@ -39,13 +41,13 @@ public class Test {
             e = Integer.parseInt(entrada);
 
             switch (e) {
-                case 1: //Agregamos un jugador
+                case 1: //Agregamos un equipo
                     System.out.println("Escribe el equipo: ");
                     entrada = bufer.readLine();
                     nombre = entrada;
                     Equipos unEquipos = new Equipos(nombre);
                     lista.add(unEquipos);
-                    ArchivoNFL.escribirArchivo(unEquipos.getNombre().toString());
+                     acciones.escribirArchivo(unEquipos.getNombre(), unEquipos.getNombre());
                     break;
                 case 2: //Eliminamos un jugador
                     System.out.println("Tus Equipos:");
@@ -53,50 +55,56 @@ public class Test {
                     for (int i = 0; i < lista.size(); i++) {
                         System.out.println("" + lista.get(i).getNombre().toString());
                     }
-                    System.out.println("Escribe la posición ");
+                    System.out.println("Escribe la posición del equipo: ");
                     entrada = bufer.readLine();
                     int j = Integer.parseInt(entrada);
                     String equipo = lista.get(j).getNombre().toString();
                     System.out.println(equipo);
-                    ArchivoNFL.eliminarArchivo(equipo);
+                    ArchivoNFL.borrarInformacion(equipo);
                     lista.remove(j);
                     break;
                 case 3://Agregar un nuevo jugador
                     System.out.println("Tus equipos:");
-                    //debo hacer un for para imprimir todos los artistas en lista
+                    
                     for (int i = 0; i < lista.size(); i++) {
                         System.out.println("" + lista.get(i).getNombre().toString());
                     }
-                    System.out.println("Escribe la posición ");
+                    System.out.println("Escribe la posición del equipo: ");
                     entrada = bufer.readLine();
                     int pi = Integer.parseInt(entrada);
                     Equipos al = lista.get(pi); 
                     System.out.println("Escribe el jugador: ");
                     entrada = bufer.readLine();
                     jugador = entrada;
-                    Jugadores unJugadores = new Jugadores(jugador);
+                    System.out.println("Escribe su posicion: ");
+                    entrada = bufer.readLine();
+                    posicion = entrada;
+                    
+                    
                    
-                    al.add(unJugadores);
-                    String Equipo1 = lista.get(pi).getNombre().toString();
+                   
+                  
+                    String Equipo1 = lista.get(pi).getNombre();
                     String jugador1 = jugador;
                     ArchivoNFL.escribirArchivo(jugador1, Equipo1);
+                   
                     break;
                 case 4://Eliminar un jugador
                     System.out.println("Tus Equipos:");
-                    //debo hacer un for para imprimir todos los artistas en lista
+                 
                     for (int i = 0; i < lista.size(); i++) {
-                        System.out.println("" + lista.get(i).getNombre().toString());
+                        System.out.println("" + lista.get(i).getNombre());
                     }
-                    System.out.println("Escribe la posición ");
+                    System.out.println("Escribe la posición del equipo: ");
                     entrada = bufer.readLine();
                     int b = Integer.parseInt(entrada);
                     Equipos av = lista.get(b); 
                  
                     System.out.println("Sus Jugadores:");
                     for (int i = 0; i < av.equipos.size(); i++) {
-                        System.out.println("" + av.equipos.get(i).getEquipo().toString());
+                        System.out.println("" + av.equipos.get(i).getEquipo());
                     }
-                    System.out.println("Escribe la posición ");
+                    System.out.println("Escribe la posición del jugador ");
                     entrada = bufer.readLine();
                     int pw = Integer.parseInt(entrada);
                     av.equipos.remove(pw);
@@ -106,21 +114,27 @@ public class Test {
                     System.out.println("Tus Equipos:");
                    
                     for (int i = 0; i < lista.size(); i++) {
-                        System.out.println("" + lista.get(i).getNombre().toString());
+                        System.out.println("" + lista.get(i).getNombre());
                     }
-                    System.out.println("Escribe la posición ");
+                    System.out.println("Escribe la posición del equipo: ");
                     entrada = bufer.readLine();
                     int pu = Integer.parseInt(entrada);
                     Equipos ab = lista.get(pu); 
                     
+                    
                     System.out.println("Sus Jugadores:");
                     for (int i = 0; i < ab.equipos.size(); i++) {
-                        System.out.println("" + ab.equipos.get(i).getEquipo().toString());
+                        System.out.println("" + ab.equipos.get(i).getEquipo());
                     }
                     break;
                 
                 case 6:
-                    ArchivoNFL.leerArchivo("artistas");
+                    ArchivoNFL.leerArchivo("Equipos");
+                        System.out.println("Tus equipos:");
+                    //debo hacer un for para imprimir todos los artistas en lista
+                    for (int i = 0; i < lista.size(); i++) {
+                        System.out.println("" + lista.get(i).getNombre().toString());
+                    }
                     break;
             }
             System.out.println("¿Quieres realizar otra acción?");
