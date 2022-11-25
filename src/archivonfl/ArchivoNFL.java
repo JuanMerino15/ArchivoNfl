@@ -102,7 +102,16 @@ public class ArchivoNFL {
 }
 
         
-   
+   public static void eliminarArchivo(String name){
+        File archivo = new File ("C:\\Users\\juanr\\Documents\\" + name + ".txt");
+        if(archivo.delete()){
+            System.out.println("Archivo eliminado " + archivo.getName());
+        }else{
+            System.out.println("Error al eliminar archivo ");
+        }
+    }
+
+
     
     
 
