@@ -4,14 +4,15 @@
  */
 package archivonfl;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+
 
 /**
  *
  * @author juan
  */
 public class Jugadores {
+
+ 
     
    
  private String name;
@@ -24,6 +25,10 @@ public class Jugadores {
         this.posicion = p;
     }
 
+    
+
+   
+   
     public String getName() {
         return name;
     }

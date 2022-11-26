@@ -27,6 +27,7 @@ public class Test {
         char a;
         LinkedList<Equipos> lista = new LinkedList<Equipos>();
         ArchivoNFL acciones = new ArchivoNFL();
+        
 
         System.out.println("Equipos de la NFL");
         System.out.println("¿Qué acción deseas realizar?");
@@ -49,7 +50,7 @@ public class Test {
                     lista.add(unEquipos);
                      acciones.escribirArchivo(unEquipos.getNombre(), unEquipos.getNombre());
                     break;
-                case 2: //Eliminamos un jugador
+                case 2: //Eliminamos un equipo
                     System.out.println("Tus Equipos:");
                     //Hacemos un for para imprimir todos los jugadores en la lista
                     for (int i = 0; i < lista.size(); i++) {
@@ -64,6 +65,7 @@ public class Test {
                     lista.remove(j);
                     break;
                 case 3://Agregar un nuevo jugador
+                  
                     System.out.println("Tus equipos:");
                     
                     for (int i = 0; i < lista.size(); i++) {
@@ -73,16 +75,17 @@ public class Test {
                     entrada = bufer.readLine();
                     int pi = Integer.parseInt(entrada);
                     Equipos al = lista.get(pi); 
-                    System.out.println("Escribe el jugador: ");
+                    System.out.println("Escribe el nombre del jugador: ");
                     entrada = bufer.readLine();
                     jugador = entrada;
-                    System.out.println("Escribe su posicion: ");
+                    System.out.println("Escribe la posicion del jugador: ");
                     entrada = bufer.readLine();
                     posicion = entrada;
-                    
-                    
-                   
-                   
+                    System.out.println("Escribe el numero de la dorsal del jugador: ");
+                    entrada = bufer.readLine();
+                    int dorsal = Integer.parseInt(entrada);
+                    Jugadores unJugadores = new Jugadores(jugador, dorsal, posicion);
+                    System.out.println("Tus Jugadores son: " + "nombre : " + unJugadores.getName() + " Dorsal: " + unJugadores.getNumero() + " Posicion: " + unJugadores.getPosicion());
                   
                     String Equipo1 = lista.get(pi).getNombre();
                     String jugador1 = jugador;
@@ -142,6 +145,6 @@ public class Test {
             a = entrada.charAt(0);
         } while (a == 'S' || a == 's');
     }
-}
 
+}
 
