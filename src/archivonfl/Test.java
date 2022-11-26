@@ -107,7 +107,7 @@ public class Test {
                     for (int i = 0; i < av.equipos.size(); i++) {
                         System.out.println("" + av.equipos.get(i).getEquipo());
                     }
-                    System.out.println("Escribe la posición del jugador ");
+                   
                     entrada = bufer.readLine();
                     int pw = Integer.parseInt(entrada);
                     av.equipos.remove(pw);
